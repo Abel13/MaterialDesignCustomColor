@@ -1,0 +1,34 @@
+﻿<Window x:Class="CustomColors.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CustomColors"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Width="90" Content="LIGHT" Margin="10"/>
+                <Button Style="{StaticResource MaterialDesignRaisedButton}" Width="90" Content="MID" Margin="10"/>
+                <Button Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="90" Content="DARK" Margin="10"/>
+                <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" Width="90" Content="ACCENT" Margin="10"/>
+            </StackPanel>
+            <GroupBox Header="USING ACCENT" materialDesign:ColorZoneAssist.Mode="Accent">
+                <StackPanel Orientation="Horizontal">
+                    <DatePicker Width="100" Margin="10"/>
+                    <CheckBox VerticalAlignment="Center" Content="Check Me" IsChecked="True" Margin="10"/>
+                    <ToggleButton Margin="10" VerticalAlignment="Center"/>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="USING DARK" materialDesign:ColorZoneAssist.Mode="Dark">
+                <StackPanel Orientation="Horizontal">
+                    <DatePicker Width="100" Margin="10"/>
+                    <CheckBox VerticalAlignment="Center" Content="Check Me" IsChecked="False" Margin="10"/>
+                    <ToggleButton IsChecked="True" Margin="10" VerticalAlignment="Center"/>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+</Window>
